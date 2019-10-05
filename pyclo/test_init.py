@@ -2,6 +2,9 @@ from . import dissoc, select_keys
 
 
 def test_dissoc():
+    assert(dissoc({}) == {})
+    assert(dissoc({'foo': 42}) == {'foo': 42})
+
     assert(dissoc({}, 'foo') == {})
     assert(dissoc({'foo': 42}, 'foo') == {})
     assert(dissoc({'foo': 42}, 'foo', 'foo') == {})
@@ -9,6 +12,9 @@ def test_dissoc():
 
 
 def test_select_keys():
+    assert(select_keys({}) == {})
+    assert(select_keys({'foo': 42}) == {})
+
     assert(select_keys({}, 'foo') == {})
     assert(select_keys({'bar': 42}, 'foo') == {})
     assert(select_keys({'bar': 42, 'foo': 23}, 'foo') == {'foo': 23})
