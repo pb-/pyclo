@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='pyclo',
-    version='0.0.1',
+    version='0.1.0',
     author='Paul Baecher',
     description='Immutable manipulation of Python data structures, Clojure style',
     long_description=open('README.md').read(),

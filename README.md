@@ -23,6 +23,7 @@ from pyclo import *
 
  - `dissoc(dict, *keys)` - return a copy of `dict` without specified `keys`.
  - `select_keys(dict, *keys)` - return a copy of `dict` only containing `keys`.
+ - `get_in(dict, keys, default=None)` - look up a sequence of keys in a nested dict.
 
 
 ## Development

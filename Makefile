@@ -6,6 +6,10 @@ test:
 	pipenv run pytest
 .PHONY: test
 
+install:
+	pipenv install --dev
+.PHONY: install
+
 dist:
 	rm -f dist/*
 	pipenv run python setup.py sdist bdist_wheel
