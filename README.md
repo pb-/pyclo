@@ -21,9 +21,14 @@ They say that there are only two hard problems in software engineering, one of t
 from pyclo import *
 ```
 
- - `dissoc(dict, *keys)` - return a copy of `dict` without specified `keys`.
- - `select_keys(dict, *keys)` - return a copy of `dict` only containing `keys`.
+ - `dissoc(dict, *keys)` - return a shallow copy of `dict` without specified `keys`.
+ - `select_keys(dict, *keys)` - return a shallow copy of `dict` only containing `keys`.
  - `get_in(dict, keys, default=None)` - look up a sequence of keys in a nested dict.
+
+
+## Guarantees
+
+Pyclo's functions never modify their arguments. However, they don't create deep copies, either. This is a practical performance trade off and puts the library user in charge of mutation hygiene.
 
 
 ## Development
